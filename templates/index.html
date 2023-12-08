@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa no YouTube</title>
+
+    <!-- Inclua os arquivos CSS e JavaScript do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #f5f5f5;"> <!-- Defina a cor de fundo -->
+    <!-- Use o Bootstrap para criar um layout responsivo -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Pesquisa no YouTube</h1>
+        <form action="/search" method="POST">
+            <div class="form-group">
+                <label for="search_query">Digite o termo de pesquisa:</label>
+                <input type="text" class="form-control" id="search_query" name="search_query" required>
+            </div>
+            <div class="form-group">
+                <label for="product_keywords">Palavras-chave do Produto  (separadas por vírgula):</label>
+                <input type="text" class="form-control" id="product_keywords" name="product_keywords" required>
+            </div>
+            <div class="form-group">
+                <label for="max_results">Quantidade de Vídeos:</label>
+                <input type="number" class="form-control" id="max_results" name="max_results" min="1" required>
+            </div>
+            <button type="submit" class="btn btn-primary d-flex mx-auto">Pesquisar</button>
+        </form>
+    </div>
+</body>
+</html>
