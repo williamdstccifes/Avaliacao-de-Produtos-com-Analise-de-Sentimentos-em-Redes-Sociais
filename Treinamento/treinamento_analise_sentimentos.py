@@ -206,7 +206,7 @@ labels = torch.cat(labels).numpy()
 print('Acc:', metrics.accuracy_score(pred > 0.67, labels))
 
 # Salvando o modelo treinado
-model_save_path = 'Treinamento'
+model_save_path = 'Modelo'
 os.makedirs(model_save_path, exist_ok=True)
 model.save_pretrained(model_save_path)
 
@@ -214,7 +214,7 @@ model.save_pretrained(model_save_path)
 from transformers import BertForSequenceClassification, BertTokenizer
 
 # Carregamento do modelo e tokenizador treinados
-model_path = 'Treinamento'
+model_path = 'Modelo'
 model = BertForSequenceClassification.from_pretrained(model_path)
 tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased')
 
